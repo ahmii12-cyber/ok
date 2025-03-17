@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wild Bloom | Elite Event Experiences</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <style>
+  </style>
+</head>
+<body>
+  <!-- Welcome Overlay -->
+  <div class="welcome-overlay">
+    <div class="welcome-text">
+      Welcome to Wild Bloom's
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="nav-logo">WILD BLOOM</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+
+    </ul>
+  </nav>
+  
+  <!-- Hero Section -->
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="videos/images7675962-hd_1920_1080_25fps.mp4" type="video/mp4">
+      Your browser does not support videos.
+    </video>
+    <div class="video-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Crafting Unforgettable Moments</h1>
+      <p class="hero-subtitle">Where dreams meet exceptional execution</p>
+      <p class="hero-para">Experience the magic of creativity that transforms every event into a masterpiece.</p>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h1>Our Services</h1>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('images/1.jpg');"></div>
+        <div class="card-content">
+          <h3>Luxury Weddings</h3>
+          <p>Tailored perfection for your special day.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce');"></div>
+        <div class="card-content">
+          <h3>Corporate Events</h3>
+          <p>Impress your clients and partners.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-image" style="background-image: url('https://images.unsplash.com/photo-1531058020387-3be344556be6');"></div>
+        <div class="card-content">
+          <h3>Private Celebrations</h3>
+          <p>Unforgettable personal milestones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Pricing Section -->
+  <section class="pricing" id="pricing">
+    <h2>Our Packages</h2>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Basic Package</h3>
+        <p class="price">$999</p>
+        <p>Includes basic decor and photography services.</p>
+        <button class="btn">Book Now</button>
+      </div>
+      <div class="price-card">
+        <h3>Premium Package</h3>
+        <p class="price">$1999</p>
+        <p>Includes premium decor, photography, and entertainment.</p>
+        <button class="btn">Book Now</button>
+      </div>
+      <div class="price-card">
+        <h3>Luxury Package</h3>
+        <p class="price">$2999</p>
+        <p>Everything you need for an unforgettable event experience.</p>
+        <button class="btn">Book Now</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <p>"Wild Bloom made our wedding day absolutely magical. Every detail was perfect!"</p>
+        <h4>- Sarah & John</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"Our corporate event was a huge success thanks to their professional touch and creativity."</p>
+        <h4>- Michael, CEO</h4>
+      </div>
+      <div class="testimonial-card">
+        <p>"I can't thank Wild Bloom enough for making my birthday celebration unforgettable."</p>
+        <h4>- Emily</h4>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Team Section -->
+  <section class="team" id="team">
+    <h2>Meet Our Team</h2>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="images/model-2359322_1280.jpg" alt="Team Member 1">
+        <div class="team-info">
+          <h3>Alex Johnson</h3>
+          <p>Creative Director</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/woman-7531315_1280.webp" alt="Team Member 2">
+        <div class="team-info">
+          <h3>Maria Rodriguez</h3>
+          <p>Event Planner</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/m2.jpg" alt="Team Member 3">
+        <div class="team-info">
+          <h3>James Smith</h3>
+          <p>Photographer</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="images/m3.jpg" alt="Team Member 4">
+        <div class="team-info">
+          <h3>Zayn Lee</h3>
+          <p>Stylist</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ Section -->
+  <section class="faq" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>What services do you offer?</h3>
+        <p>We offer full event planning, luxury decor, photography, and custom experiences.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How can I book an event?</h3>
+        <p>You can book an event via our contact form or by calling our office directly.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Do you provide customization?</h3>
+        <p>Yes, every event is tailored to your vision. We work closely with you for the best outcome.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What is the pricing structure?</h3>
+        <p>Our pricing is package-based and customizable. Please check our pricing section for details.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Wild Bloom</h2>
+        <p>Creating magic since 2010</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>📞 +1 (555) 123-4567</p>
+        <p>📧 events@wildbloom.com</p>
+        <p>📍 123 Luxury Avenue, NYC</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Welcome Overlay removal
+      const overlay = document.querySelector('.welcome-overlay');
+      overlay.addEventListener('animationend', () => {
+        overlay.style.display = 'none';
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          overlay.style.display = 'none';
+        }
+      });
+      
+      // Navbar Animations
+      gsap.from('.nav-logo', { duration: 1, y: -30, opacity: 0, ease: "power2.out" });
+      gsap.from('.nav-links li', { duration: 1, y: -30, opacity: 0, ease: "power2.out", stagger: 0.2, delay: 0.3 });
+      
+      // Hero Section Text Animations
+      gsap.from('.hero-title', { duration: 1.5, y: -50, opacity: 0, ease: "power4.out" });
+      gsap.from('.hero-subtitle', { duration: 1.5, y: 50, opacity: 0, ease: "power4.out", delay: 0.5 });
+      gsap.from('.hero-para', { duration: 1.5, x: -100, opacity: 0, ease: "power2.out", delay: 1 });
+      
+      // Animate service cards
+      gsap.utils.toArray('.service-card').forEach(card => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top center"
+          },
+          opacity: 0,
+          y: 50,
+          duration: 1
+        });
+      });
+      
+      // Animate pricing cards with alternating left/right animation
+      gsap.utils.toArray('.price-card').forEach((card, index) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          x: index % 2 === 0 ? -150 : 150,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out"
+        });
+      });
+      
+      // Animate testimonial cards with alternating directions
+      gsap.utils.toArray('.testimonial-card').forEach((card, index) => {
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          x: index % 2 === 0 ? -200 : 200,
+          opacity: 0,
+          duration: 1.2,
+          ease: "back.out(1.7)"
+        });
+      });
+      
+      // Animate team cards with alternating directions: left, right, top, bottom
+      gsap.utils.toArray('.team-card').forEach((card, index) => {
+        let fromDirection;
+        switch(index % 4) {
+          case 0: fromDirection = { x: -150 }; break;
+          case 1: fromDirection = { x: 150 }; break;
+          case 2: fromDirection = { y: -150 }; break;
+          case 3: fromDirection = { y: 150 }; break;
+        }
+        gsap.from(card, {
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          ...fromDirection,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power2.out"
+        });
+      });
+      
+      // Animate FAQ items with upward fade-in
+      gsap.utils.toArray('.faq-item').forEach((item) => {
+        gsap.from(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          ease: "power2.out"
+        });
+      });
+    });
+  </script>
+</body>
+</html>

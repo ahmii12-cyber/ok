@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wild Bloom | Gallery</title>
+
+  <!-- External Resources -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <link rel="stylesheet" href="gallery.css">
+  <style>
+    /* Global Resets & Theme Variables */
+   
+  </style>
+</head>
+<body>
+  <!-- Welcome Overlay -->
+  <div class="welcome-overlay">
+    <div class="welcome-text">
+      Our Gallery
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="nav-logo">WILD BLOOM</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+
+    </ul>
+  </nav>
+  
+  <!-- Gallery Hero Section -->
+  <section class="gallery-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Our Gallery</h1>
+      <p class="hero-subtitle">Discover the beauty of our events captured in stunning imagery.</p>
+    </div>
+  </section>
+  
+  <!-- Gallery Filter -->
+  <section class="gallery-filter">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="wedding">Weddings</button>
+      <button class="filter-btn" data-filter="corporate">Corporate</button>
+      <button class="filter-btn" data-filter="social">Social</button>
+      <button class="filter-btn" data-filter="decor">Decor</button>
+    </div>
+  </section>
+  
+  <!-- Gallery Grid -->
+  <section class="gallery-grid">
+    <!-- Weddings (3 items) -->
+    <div class="gallery-item" data-category="wedding">
+      <img src="images/1.jpg" alt="Wedding Event">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Luxury Wedding</h3>
+          <p>Grand ballroom celebration</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="wedding">
+      <img src="images/3.jpg" alt="Elegant Wedding">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Elegant Ceremony</h3>
+          <p>Timeless romance</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="wedding">
+      <img src="images/a1.jpg" alt="Outdoor Wedding">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Outdoor Wedding</h3>
+          <p>Scenic garden affair</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Corporate (3 items) -->
+    <div class="gallery-item" data-category="corporate">
+      <img src="images/cor.webp" alt="Corporate Event">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Product Launch</h3>
+          <p>Innovative reveal</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="corporate">
+      <img src="images/pro.jpg" alt="Corporate Meeting">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Business Summit</h3>
+          <p>Professional gathering</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="corporate">
+      <img src="images/net.jpg" alt="Networking Event">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Networking Event</h3>
+          <p>Corporate connect</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Social (3 items) -->
+    <div class="gallery-item" data-category="social">
+      <img src="images/cel.jpg" alt="Social Celebration">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Milestone Birthday</h3>
+          <p>Golden celebration</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="social">
+      <img src="images/par.jpg" alt="Party Vibes">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Party Night</h3>
+          <p>Vibrant social event</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="social">
+      <img src="images/fun.jpg" alt="Casual Social">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Casual Gathering</h3>
+          <p>Fun with friends</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Decor (3 items) -->
+    <div class="gallery-item" data-category="decor">
+      <img src="images/flo.jpg" alt="Event Decor">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Floral Installation</h3>
+          <p>Custom ceremony backdrop</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="decor">
+      <img src="images/elg.jpg" alt="Elegant Decor">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Elegant Decor</h3>
+          <p>Artistic design</p>
+        </div>
+      </div>
+    </div>
+    <div class="gallery-item" data-category="decor">
+      <img src="images/mod.jpg" alt="Modern Decor">
+      <div class="item-overlay">
+        <div class="item-caption">
+          <h3>Modern Decor</h3>
+          <p>Sleek & stylish</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Lightbox -->
+  <div class="lightbox">
+    <span class="close-btn">&times;</span>
+    <div class="lightbox-content">
+      <img class="lightbox-img" src="" alt="Enlarged View">
+    </div>
+    <button class="nav-btn prev-btn"><</button>
+    <button class="nav-btn next-btn">></button>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Wild Bloom</h2>
+        <p>Creating magic since 2010</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>📞 +1 (555) 123-4567</p>
+        <p>📧 events@wildbloom.com</p>
+        <p>📍 123 Luxury Avenue, NYC</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      /* Welcome Overlay Removal */
+      const overlay = document.querySelector('.welcome-overlay');
+      overlay.addEventListener('animationend', () => {
+        overlay.style.display = 'none';
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          overlay.style.display = 'none';
+          lightbox.classList.remove('active');
+        }
+      });
+      
+      /* Navigation Animations */
+      gsap.from('.nav-logo', { duration: 1, y: -30, opacity: 0, ease: "power2.out" });
+      gsap.from('.nav-links li', { duration: 1, y: -30, opacity: 0, ease: "power2.out", stagger: 0.2, delay: 0.3 });
+      
+      /* Hero Text Animation */
+      gsap.from('.hero-title', { duration: 1.5, y: -50, opacity: 0, ease: "power4.out" });
+      gsap.from('.hero-subtitle', { duration: 1.5, y: 50, opacity: 0, ease: "power4.out", delay: 0.5 });
+      
+      /* Filter Button & Gallery Animation */
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          
+          // Animate items that match the filter
+          const visibleItems = Array.from(galleryItems).filter(item => filter === 'all' || item.dataset.category === filter);
+          const hiddenItems = Array.from(galleryItems).filter(item => filter !== 'all' && item.dataset.category !== filter);
+          
+          // Hide unmatched items
+          hiddenItems.forEach(item => {
+            gsap.to(item, { 
+              duration: 0.5,
+              opacity: 0,
+              scale: 0.8,
+              display: 'none',
+              ease: "power2.out"
+            });
+          });
+          // Show matched items with a stagger
+          gsap.to(visibleItems, { 
+            duration: 0.5,
+            opacity: 1,
+            scale: 1,
+            display: 'block',
+            ease: "power2.out",
+            stagger: 0.1
+          });
+        });
+      });
+      
+      /* Lightbox Functionality */
+      const lightbox = document.querySelector('.lightbox');
+      const lightboxImg = document.querySelector('.lightbox-img');
+      const galleryImages = document.querySelectorAll('.gallery-item img');
+      let currentIndex = 0;
+      
+      galleryImages.forEach((img, index) => {
+        img.addEventListener('click', () => {
+          currentIndex = index;
+          lightboxImg.src = img.src;
+          gsap.fromTo(lightbox, {opacity: 0}, {opacity: 1, duration: 0.5, onStart: () => lightbox.classList.add('active')});
+        });
+      });
+      
+      document.querySelector('.close-btn').addEventListener('click', () => {
+        gsap.to(lightbox, {opacity: 0, duration: 0.5, onComplete: () => lightbox.classList.remove('active')});
+      });
+      
+      document.querySelector('.prev-btn').addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+      });
+      
+      document.querySelector('.next-btn').addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        lightboxImg.src = galleryImages[currentIndex].src;
+      });
+      
+      /* Scroll-triggered Animations for Gallery Items */
+      gsap.utils.toArray('.gallery-item').forEach((item, index) => {
+        gsap.from(item, {
+          scrollTrigger: {
+            trigger: item,
+            start: "top 80%"
+          },
+          opacity: 0,
+          y: 50,
+          duration: 0.8,
+          delay: index * 0.1
+        });
+      });
+    });
+  </script>
+</body>
+</html>

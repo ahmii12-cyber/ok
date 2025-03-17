@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wild Bloom | About Us</title>
+
+  <!-- External Resources -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="about.css">  
+  <style>
+    /* Global Resets & Theme Variables */
+    
+  </style>
+</head>
+<body>
+  <!-- Welcome Overlay -->
+  <div class="welcome-overlay">
+    <div class="welcome-text">
+      About Us
+    </div>
+  </div>
+  
+  <!-- Navigation -->
+  <nav class="glass-nav">
+    <div class="nav-logo">WILD BLOOM</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+  
+  <!-- About Hero Section -->
+  <section class="about-hero">
+    <div class="hero-content">
+      <h1 class="hero-title">About Wild Bloom</h1>
+      <p class="hero-subtitle">Where Dreams Blossom into Reality</p>
+    </div>
+  </section>
+  
+  <!-- Our Story Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>
+        Founded in 2010, Wild Bloom has been transforming visions into unforgettable events. With a passion for detail and creativity, our journey began as a small boutique team with a big dream.
+      </p>
+      <p style="margin-top: 1rem;">
+        Over the years, we’ve grown into a premier event experiences company that specializes in luxury weddings, corporate galas, and social celebrations. Every event we design is a unique canvas where imagination meets precision.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Our Story">
+    </div>
+  </section>
+  
+  <!-- Our Mission Section -->
+  <section class="mission-section">
+    <h2>Our Mission</h2>
+    <p>
+      To craft extraordinary events that inspire and captivate. We blend creativity, passion, and innovation to transform every moment into a lasting memory.
+    </p>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Wild Bloom</h2>
+        <p>Creating magic since 2010</p>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <p>📞 +1 (555) 123-4567</p>
+        <p>📧 events@wildbloom.com</p>
+        <p>📍 123 Luxury Avenue, NYC</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-pinterest"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Remove welcome overlay on animation end
+      const overlay = document.querySelector('.welcome-overlay');
+      overlay.addEventListener('animationend', () => {
+        overlay.style.display = 'none';
+      });
+      
+      // Navigation Animations
+      gsap.from('.nav-logo', { duration: 1, y: -30, opacity: 0, ease: "power2.out" });
+      gsap.from('.nav-links li', { duration: 1, y: -30, opacity: 0, ease: "power2.out", stagger: 0.2, delay: 0.3 });
+      
+      // Hero Section Animations
+      gsap.from('.hero-title', { duration: 1.5, y: -50, opacity: 0, ease: "power4.out" });
+      gsap.from('.hero-subtitle', { duration: 1.5, y: 50, opacity: 0, ease: "power4.out", delay: 0.5 });
+      
+      // About Section Scroll-triggered Animations
+      gsap.from('.about-text', { 
+        duration: 1.2, 
+        x: -50, 
+        opacity: 0, 
+        ease: "power2.out", 
+        scrollTrigger: { trigger: '.about-section', start: 'top 80%' } 
+      });
+      gsap.from('.about-image', { 
+        duration: 1.2, 
+        x: 50, 
+        opacity: 0, 
+        ease: "power2.out", 
+        scrollTrigger: { trigger: '.about-section', start: 'top 80%' } 
+      });
+      
+      // Mission Section Animation
+      gsap.from('.mission-section h2', { 
+        duration: 1.5, 
+        y: -30, 
+        opacity: 0, 
+        ease: "power2.out", 
+        scrollTrigger: { trigger: '.mission-section', start: 'top 80%' } 
+      });
+      gsap.from('.mission-section p', { 
+        duration: 1.5, 
+        y: 30, 
+        opacity: 0, 
+        ease: "power2.out", 
+        scrollTrigger: { trigger: '.mission-section', start: 'top 80%' } 
+      });
+    });
+  </script>
+</body>
+</html>
