@@ -1,0 +1,416 @@
+:root {
+    --primary: #ff4d4d;
+    --accent: #ffd93d;
+    --dark: #0a0a0a;
+    --light: #ffffff;
+    --gradient: linear-gradient(45deg, var(--primary), var(--accent));
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--dark);
+    color: var(--light);
+    overflow-x: hidden;
+  }
+  /* Welcome Overlay Animation */
+  .welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeOut 1.5s ease-in-out forwards;
+    animation-delay: 5s; /* Delay before disappearing */
+  }
+  .welcome-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 3rem;
+    color: #0a0a0a;
+    background: rgb(255,77,77);
+background: radial-gradient(circle, rgba(255,77,77,1) 21%, rgba(255,217,61,1) 100%);
+    text-align: center;
+    opacity: 0;
+    animation: fadeInOut 2s ease-in-out forwards;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1);
+    }
+  }
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  /* Navigation */
+  .glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1.5rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(10, 10, 10, 0.8);
+    backdrop-filter: blur(15px);
+    z-index: 1000;
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: var(--light);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient);
+    transition: width 0.3s;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  /* Hero Section */
+  .hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 10, 10, 0.4);
+  }
+  .hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    text-align: center;
+  }
+  .hero-title {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+  /* New Hero Paragraph */
+  .hero-para {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #ccc;
+  }
+  /* Services Section */
+  .services {
+    padding: 6rem 10%;
+    text-align: center;
+    margin-top: 80px; /* ensure content isn't hidden behind nav */
+  }
+  .services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  .service-card {
+    position: relative;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  .service-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s;
+  }
+  .card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 2rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    text-align: left;
+  }
+  .card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .card-content p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  /* Pricing Section */
+  .pricing {
+    padding: 6rem 10%;
+    text-align: center;
+    background: #111;
+  }
+  .pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .price-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s;
+  }
+  .price-card:hover {
+    transform: scale(1.05);
+  }
+  .price-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .price-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+  }
+  .price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+  .btn {
+    background: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .btn:hover {
+    background: #e63946;
+  }
+  /* Testimonials Section */
+  .testimonials {
+    padding: 6rem 10%;
+    text-align: center;
+  }
+  .testimonials h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .testimonial-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 2rem;
+    transition: transform 0.3s;
+  }
+  .testimonial-card:hover {
+    transform: scale(1.05);
+  }
+  .testimonial-card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  .testimonial-card h4 {
+    font-size: 1.5rem;
+    color: var(--accent);
+  }
+  /* Team Section */
+  .team {
+    padding: 6rem 10%;
+    text-align: center;
+    background: #0f0f0f;
+  }
+  .team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .team-card {
+    background: #1e1e1e;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  .team-card:hover {
+    transform: scale(1.05);
+  }
+  .team-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  .team-info {
+    padding: 1.5rem;
+    text-align: left;
+  }
+  .team-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .team-info p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  /* FAQ Section */
+  .faq {
+    padding: 6rem 10%;
+    text-align: center;
+    background: #111;
+  }
+  .faq h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  .faq-item {
+    background: #1e1e1e;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: left;
+    transition: transform 0.3s;
+  }
+  .faq-item:hover {
+    transform: scale(1.02);
+  }
+  .faq-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--accent);
+  }
+  .faq-item p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  /* Footer */
+  .main-footer {
+    background: #1a1a1a;
+    padding: 4rem 10%;
+    margin-top: 6rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+  }
+  .footer-contact h3,
+  .footer-social h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .footer-contact p {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+  .social-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .social-links a {
+    color: var(--light);
+    font-size: 1.8rem;
+    transition: color 0.3s;
+  }
+  .social-links a:hover {
+    color: var(--primary);
+  }
+  @media (max-width: 768px) {
+    .glass-nav {
+      padding: 1rem 5%;
+    }
+    .nav-logo {
+      font-size: 2rem;
+    }
+  }
